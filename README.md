@@ -1,6 +1,6 @@
 # Diseno en Figma
 
-<img src="./images/disenoFigma.png" />
+<img src="./deploy/images/disenoFigma.png" />
 
 <br />
 
