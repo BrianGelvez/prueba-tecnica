@@ -6,8 +6,8 @@
 
 # Realizado en un dia con HTML, CSS y Vanilla JS.
 
-<img src="./images/landingEscritorio.png" />
+<img src="./deploy/images/landingEscritorio.png" />
 
 <br />
 
-<img src="./images/landingMobile.png" />
+<img src="./deploy/images/landingMobile.png" />
