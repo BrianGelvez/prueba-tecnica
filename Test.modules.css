@@ -1,0 +1,457 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+.offer {
+    background-color: #7AA65A;
+    width: 100%;
+    color: white;
+    padding-top: 1px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.header {
+    width: 100%;
+    background-color: #FEFFFF;
+    height: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 2px 3px 3px #e8e8e4;
+}
+
+.botonAmburguesa {
+    background-color: burlywood;
+    display: none;
+    border: none;
+}
+
+.nav {
+    background-color: #FEFFFF;
+    margin-left: 250px;
+    z-index: 1;
+}
+
+.svg {
+    width: 2em;
+    height: 2em;
+}
+
+.ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.header li {
+    padding-right: 4rem; 
+    list-style: none;
+    font-weight: bold;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: #7AA65A; 
+}
+
+.buttonCompra {
+    width: 45px;
+    height: 40px;
+    margin-left: 250px; 
+    border: none;
+    background-color: #FEFFFF;
+    cursor: pointer;
+}
+
+.buttonCompra img {
+    width: 100%;
+    background-color: #FEFFFF;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+.divConteiner {
+    background-color: #E8F7FB;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.divConteinerText {
+    margin-top: 100px;
+}
+
+.title {
+    font-size: 60px;
+    color: #7AA65A;
+    margin: 0; 
+}
+
+.subTitle {
+    color: #7AA65A;
+}
+
+.conteinerButtons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.boton1 {
+    padding: 4%;
+    width: 45%;
+    background-color: #7AA65A;
+    border: 1px solid #7AA65A;
+    border-radius: 10px;
+    color: #FEFFFF;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.boton1::after {
+    content: ">";
+    margin-left: 30px;
+}
+
+.boton2 {
+    padding: 4%;
+    width: 45%;
+    background-color: #E8F7FB;
+    border: 1px solid #7AA65A;
+    border-radius: 10px;
+    color: #7AA65A;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.boton2::after {
+    content: ">"; 
+    margin-left: 30px;
+}
+
+.buttonsArrows {
+    margin-top: 150px;
+}
+
+.butonArrow1 {
+    width: 9%;
+    border-radius: 14px;
+    padding: 1%;
+    background-color: #E8F7FB;
+    color: #7AA65A;
+    border: 1px solid #7AA65A;
+    cursor: pointer;
+}
+
+.butonArrow2 {
+    width: 9%;
+    border-radius: 14px;
+    padding: 1%;
+    color: #e8e8e4;
+    background-color: #7AA65A;
+    border: 1px solid #7AA65A;
+    cursor: pointer;
+}
+
+/* .divImage {
+
+} */
+
+.imageChica {
+    border-radius: 20px;
+    width: 100%;
+    
+}
+
+.titleDiv2 {
+    font-size: 45px;
+    font-weight: bold;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstPart {
+    color: #7aa65a95; 
+}
+
+.secondPart {
+    color: #7AA65A;
+    margin-left: 10px;
+}
+
+/* Estilos para las pestañas */
+.tabs {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tab-header {
+    display: flex;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #00000019;
+    border-radius: 20px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #7aa65a; 
+}
+
+.tab.active {
+    background-color: #7aa65a;
+    color: white;
+    border-radius: 20px;
+}
+
+/* Estilos para el indicador de la pestaña activa */
+.tab-indicator {
+    background-color: #7aa65a;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para el cuerpo de las pestañas */
+.tab-body {
+    padding: 20px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.imagenes swiper-img {
+    width: 20%;
+}
+
+.swiper-slide img {
+    width: 100%; /* Las imágenes ocuparán el 100% del ancho del contenedor */
+    height: 100%; /* Las imágenes ocuparán el 100% de la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor sin distorsionar */
+}
+
+/* Estilos para el contenido de las pestañas */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Estilos para el contenido de las colecciones */
+.tab-content h1 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.tab-content p {
+    color: #555;
+    font-size: 15px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.imagenes {
+    width: 15%; /* Ajusta el ancho de las imágenes según tus necesidades */
+    height: auto;
+    margin: 10px;
+}
+
+.product {
+/* background-color: #00000019; */
+font-size: 20px;
+}
+
+
+@media (max-width: 1255px) {
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+    }
+    .buttonCompra {
+        display: none;
+    }
+
+    .nav {
+        background-color: #FEFFFF;
+        margin: 0;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .buttonCompra {
+        margin-right: 20px;
+    }
+
+    .botonAmburguesa {
+        background-color: #FEFFFF;
+        display: block;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+
+    .nav {
+        width: 50%;
+        display: none;
+        height: 0;
+        z-index: 2;
+    }
+
+    .nav.activo {
+        display: block;
+    }
+
+    .ul {
+        flex-direction: column;
+    }
+
+    .header li {
+        margin: 1rem 0;
+    }
+    .buttonCompra {
+        display: block;
+    }
+
+    .divConteiner {
+        background-color: #E8F7FB;
+        padding: 4%;
+        display: flex;
+        flex-direction: column-reverse; 
+        align-items: center;
+        justify-content: center;
+    }
+
+    .divConteinerText {
+        width: 100%;
+        margin: 0;
+    }
+
+    .divImage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0%;
+        padding: 0;
+    }
+    
+    .imageChica {
+        border-radius: 20px;
+        width: 70%;
+        margin-top: 25px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boton2 {
+        border: 0;
+        font-size: 18px;
+        font-weight: bold;
+        color:black;
+    }
+
+    .buttonsArrows {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .conteinerButtons {
+        display: flex;
+        flex-direction: column; /* Cambia 'justify-content' a 'flex-direction' */
+        align-items: center;
+    }
+
+    .titleDiv2 {
+        font-size: 45px;
+        font-weight: bold;
+        color:black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .swiper-slide img {
+        width: 100%; /* Las imágenes ocuparán el 100% del ancho del contenedor */
+        height: 100%; /* Las imágenes ocuparán el 100% de la altura del contenedor */
+        object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor sin distorsionar */
+    }
+
+    .tab-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .tab {
+        flex-basis: 45%;
+        text-align: center;
+        padding: 20px 0;
+        cursor: pointer;
+        font-weight: bold;
+        margin: 10px;
+        border: 1px solid #00000019;
+        border-radius: 20px;
+    }
+
+    .tab.active {
+        background-color: #7aa65a;
+        color: white;
+        width: 5%;
+        border-radius: 20px;
+    }
+
+    .imagenes {
+        width: 60%; /* Ajusta el ancho de las imágenes según tus necesidades */
+        height: auto;
+        margin: 5%;
+        margin-left: 0px;
+    }
+}
