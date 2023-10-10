@@ -66,50 +66,77 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     let collection1Swiper, collection2Swiper, collection3Swiper, collection4Swiper;
-    
+
     function initSwipers() {
         collection1Swiper = new Swiper('.collection1-swiper', {
             direction: 'horizontal',
-            loop: true,
-            slidesPerView: 5,
-            spaceBetween: 50,
+            loop: false,
+            slidesPerView: 3,  // Muestra 3 diapositivas cuando el tamaño de la pantalla es menor o igual a 800px
+            spaceBetween: 30,  // Espacio entre las diapositivas
             pagination: {
                 el: '.swiper-pagination',
             },
             allowTouchMove: true,
+            breakpoints: {
+                800: {
+                    slidesPerView: 5,  // Muestra 5 diapositivas cuando el tamaño de la pantalla es mayor a 800px
+                    spaceBetween: 50
+                }
+            }
         });
+
+        // Repite el mismo patrón para los otros swipers (collection2, collection3, collection4)
+        // ...
 
         collection2Swiper = new Swiper('.collection2-swiper', {
             direction: 'horizontal',
-            loop: true,
-            slidesPerView: 5,
-            spaceBetween: 50,
+            loop: false,
+            slidesPerView: 3,  // Muestra 3 diapositivas cuando el tamaño de la pantalla es menor o igual a 800px
+            spaceBetween: 30,  // Espacio entre las diapositivas
             pagination: {
                 el: '.swiper-pagination',
             },
             allowTouchMove: true,
+            breakpoints: {
+                800: {
+                    slidesPerView: 5,  // Muestra 5 diapositivas cuando el tamaño de la pantalla es mayor a 800px
+                    spaceBetween: 50
+                }
+            }
         });
 
         collection3Swiper = new Swiper('.collection3-swiper', {
             direction: 'horizontal',
-            loop: true,
-            slidesPerView: 5,
-            spaceBetween: 50,
+            loop: false,
+            slidesPerView: 3,  // Muestra 3 diapositivas cuando el tamaño de la pantalla es menor o igual a 800px
+            spaceBetween: 30,  // Espacio entre las diapositivas
             pagination: {
                 el: '.swiper-pagination',
             },
             allowTouchMove: true,
+            breakpoints: {
+                800: {
+                    slidesPerView: 5,  // Muestra 5 diapositivas cuando el tamaño de la pantalla es mayor a 800px
+                    spaceBetween: 50
+                }
+            }
         });
 
         collection4Swiper = new Swiper('.collection4-swiper', {
             direction: 'horizontal',
-            loop: true,
-            slidesPerView: 5,
-            spaceBetween: 50,
+            loop: false,
+            slidesPerView: 3,  // Muestra 3 diapositivas cuando el tamaño de la pantalla es menor o igual a 800px
+            spaceBetween: 30,  // Espacio entre las diapositivas
             pagination: {
                 el: '.swiper-pagination',
             },
             allowTouchMove: true,
+            breakpoints: {
+                800: {
+                    slidesPerView: 5,  // Muestra 5 diapositivas cuando el tamaño de la pantalla es mayor a 800px
+                    spaceBetween: 50
+                }
+            }
         });
     }
 
@@ -118,32 +145,22 @@ document.addEventListener('DOMContentLoaded', () => {
             collection1Swiper.destroy();
         }
 
-        if (collection2Swiper && collection2Swiper.destroy) {
-            collection2Swiper.destroy();
-        }
-
-        if (collection3Swiper && collection3Swiper.destroy) {
-            collection3Swiper.destroy();
-        }
-
-        if (collection4Swiper && collection4Swiper.destroy) {
-            collection4Swiper.destroy();
-        }
+        // Repite el mismo patrón para los otros swipers (collection2, collection3, collection4)
+        // ...
     }
 
-    //funcion para manejar la logica del carrusel de las pestanas.
     function handleResize() {
-        const isMobile = window.innerWidth;
+        const isMobile = window.innerWidth <= 800;
         if (isMobile) {
-            // destroySwipers();
+            destroySwipers();
             initSwipers();
         } else {
             destroySwipers();
+            initSwipers();
         }
     }
 
     window.addEventListener('resize', handleResize);
-
 
     handleResize();
 
@@ -179,7 +196,7 @@ const swiper = new Swiper('.swiper', {
   });
 
 
-tabs.forEach(tab => {
+  tabs.forEach(tab => {
     tab.addEventListener('click', () => {
         console.log("Clic en tab");
     
@@ -187,22 +204,16 @@ tabs.forEach(tab => {
             content.classList.remove('active');
         });
 
-      
         tabs.forEach(tab => {
-            tab.classList.remove('active-tab');
+            tab.classList.remove('active-tab', 'tab-indicator', 'active'); // Remover todas las clases relacionadas con el estilo
         });
 
-      
         const collection = tab.getAttribute('data-collection');
-
-       
         const activeContent = document.querySelector(`.tab-content.${collection}`);
         activeContent.classList.add('active');
-
         
-        tab.classList.add('active-tab');
+        tab.classList.add('active', 'tab-indicator'); // Agregar las clases de estilo al botón clicado
 
-   
         activeTab = tab;
     });
 });
